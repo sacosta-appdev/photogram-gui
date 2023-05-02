@@ -1,0 +1,26 @@
+<ul>
+  <li><a href="/users">Users</a></li>
+  <li><a href="/photos">Photos</a></li>
+</ul>
+
+<h1>List of users</h1>
+
+
+<table border="2">
+  <tr>
+    <th>ID</th>
+    <th>Username</th>
+    <th></th>
+  </tr>
+
+  <% @user_ordered.each do |each_user| %>
+
+  <tr>
+    <td><%= each_user.id %></td>
+    <td><%= each_user.username %></td>
+    <td><a href="/users/<%= each_user.username %>">Show details</a></td>
+  </tr>
+
+  <% end %>
+
+</table>

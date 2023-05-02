@@ -22,4 +22,5 @@ class Comment < ApplicationRecord
 
     return the_user
   end
+  
 end
