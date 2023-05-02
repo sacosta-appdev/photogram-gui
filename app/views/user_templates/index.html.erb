@@ -1,26 +1,28 @@
-<ul>
-  <li><a href="/users">Users</a></li>
-  <li><a href="/photos">Photos</a></li>
-</ul>
-
 <h1>List of users</h1>
 
+<form action="/add_user">
+  <label for="user_id">Username</label>
+  <input id="user_id" name="new_username" placeholder="Enter a username...">
+  <button>Add user</button>
+</form>
 
-<table border="2">
-  <tr>
-    <th>ID</th>
-    <th>Username</th>
-    <th></th>
-  </tr>
+<p>
+  <table border="2">
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th></th>
+    </tr>
 
-  <% @user_ordered.each do |each_user| %>
+    <% @user_ordered.each do |each_user| %>
 
-  <tr>
-    <td><%= each_user.id %></td>
-    <td><%= each_user.username %></td>
-    <td><a href="/users/<%= each_user.username %>">Show details</a></td>
-  </tr>
+    <tr>
+      <td><%= each_user.id %></td>
+      <td><%= each_user.username %></td>
+      <td><a href="/users/<%= each_user.username %>">Show details</a></td>
+    </tr>
 
-  <% end %>
+    <% end %>
 
-</table>
+  </table>
+</p>
